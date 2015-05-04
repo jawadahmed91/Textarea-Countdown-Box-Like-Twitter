@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Change Selector JQuery</title>
+</head>
+
+<body>
+	<textarea id="msg" rows="10" cols="30"></textarea>
+    Words Count : <span id="count"></span>
+    
+    <br>
+	<br>
+
+    
+    <textarea id="msg2" rows="10" cols="30"></textarea>
+     Words Count : <span id="count2"></span>
+    
+<script src="jquery-1.11.2.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$('#count').text(100);
+        $('#msg').on('keyup', function(){
+			var countWordsInTextarea = $(this).val();
+			countWordsInTextarea = countWordsInTextarea.length;	
+			
+			var remaining = 100;
+			
+			var endWord = remaining - countWordsInTextarea;
+			//alert(endWord);
+			$('#count').text(endWord);
+			
+			if(endWord <= 0){
+				var countWordsInTextarea = $('#msg').val();
+				countWordsInTextarea = countWordsInTextarea.substr(0, 100);
+				$('#msg').val(countWordsInTextarea);
+			}
+			
+		});
+		
+		
+		$('#count2').text(100);
+        $('#msg2').on('keyup', function(){
+			var countWordsInTextarea = $(this).val();
+			countWordsInTextarea = countWordsInTextarea.length;	
+			
+			var remaining = 100;
+			
+			var endWord = remaining - countWordsInTextarea;
+			//alert(endWord);
+			$('#count2').text(endWord);
+			
+			if(endWord <= 0){
+				$('#count2').css('color', '#F5090D');
+				
+			}
+			
+		});
+    });
+</script>
+</body>
+</html>
