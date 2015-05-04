@@ -1,0 +1,12 @@
+{
+    "name": "vendor/textbox-countdown-like-twitter",
+    "description": "This is twitter like countdown box",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jawad Ahmed",
+            "email": "jawad_ahmed91@live.com"
+        }
+    ],
+    "require": {}
+}
